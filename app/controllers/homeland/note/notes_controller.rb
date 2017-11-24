@@ -13,6 +13,11 @@ module Homeland::Note
       @note.hits.incr(1)
     end
 
+    def show_wechat
+      @note = ::Note.find(params[:id])
+      render layout: 'wechat'
+    end
+
     def new
       authorize! :create, Note
       @note = current_user_notes.build

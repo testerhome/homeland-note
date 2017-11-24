@@ -14,6 +14,7 @@
           <span class="opts pull-right">
             <%= link_to icon_tag("pencil"), edit_note_path(@note), title: "编辑" %>
             <%= link_to icon_tag("trash"), note_path(@note), 'data-confirm' => "确定要删除么？", method: :delete %>
+            <%= link_to raw("<i class='fa fa-weixin'></i>"), show_wechat_note_path(@note), target: "_blank", title: "微信排版" %>     
           </span>
           <% end %>
         </div>
