@@ -20,7 +20,7 @@ module Homeland::Note
     # 普通会员权限
     def roles_for_members
       can :create, Note
-      can [:update, :destroy, :read, :show_wechat], Note, user_id: user.id
+      can [:update, :destroy, :read], Note, user_id: user.id
       can :read, Note, publish: true
       basic_read_only
     end

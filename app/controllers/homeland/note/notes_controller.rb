@@ -15,6 +15,7 @@ module Homeland::Note
 
     def show_wechat
       @note = ::Note.find(params[:id])
+      authorize! :read, @note
       render layout: 'wechat'
     end
 
